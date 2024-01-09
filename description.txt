@@ -1,1 +1,3 @@
 Despite what the Dye Trader says, Strange Dyes do in fact have a price.
+
+The Strange Dyes nearly fill the Dye Trader's inventory, meaning there's barely any slots left if another mod adds extra dyes. Use with other mods at your own risk.
