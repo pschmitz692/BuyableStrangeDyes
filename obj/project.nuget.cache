@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+rp47l2hdHche+uOtguW5NoAjwHFYa3Vg7/Xi0jpJwTwLKYKI1fcanE4A47mGeud6wXqbJCRnLNbZ3mMj65XNg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\parle\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BuyableStrangeDyes\\BuyableStrangeDyes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\parle\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,3 @@
+displayName = Buyable Strange Dyes
+author = spoon
+version = 1.0
