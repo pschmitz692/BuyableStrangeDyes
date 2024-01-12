@@ -7,6 +7,9 @@ namespace BuyableStrangeDyes
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
+        [DefaultValue(true)]
+        public bool useGlobalPrice;
+
         [Range(1, 100000000)]
         [DefaultValue(1000000)]
         [ReloadRequired]

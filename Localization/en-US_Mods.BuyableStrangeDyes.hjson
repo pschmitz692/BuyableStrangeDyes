@@ -1,5 +1,10 @@
 Configs: {
 	ModConfiguration: {
+		useGlobalPrice: {
+			Tooltip: Use the below value for all Strange Dyes
+			Label: Use Global Price
+		}
+
 		DyePrice: {
 			Tooltip: The cost of Strange Dyes in copper coins
 			Label: Dye Price
