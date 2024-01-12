@@ -1,13 +1,18 @@
 Configs: {
 	ModConfiguration: {
 		useGlobalPrice: {
-			Tooltip: Use the below value for all Strange Dyes
-			Label: Use Global Price
+			Tooltip: Disabling this will enable per-dye prices
+			Label: Use the Dye Price value below for all Strange Dyes
 		}
 
 		DyePrice: {
 			Tooltip: The cost of Strange Dyes in copper coins
 			Label: Dye Price
+		}
+
+		enablePreHardmode: {
+			Tooltip: ""
+			Label: Enable Strange Dyes Pre-Hardmode
 		}
 
 		DisplayName: Buyable Strange Dyes Config

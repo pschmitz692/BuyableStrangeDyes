@@ -6,7 +6,7 @@ namespace BuyableStrangeDyes.NPC
 {
     internal class StrangeDyeTrader : GlobalNPC
     {
-        ModConfiguration modConfig = ModContent.GetInstance<ModConfiguration>();
+        static ModConfiguration modConfig = ModContent.GetInstance<ModConfiguration>();
 
         static short[] strangeDyes = {
             ItemID.AcidDye,
@@ -47,13 +47,14 @@ namespace BuyableStrangeDyes.NPC
         public override void ModifyShop(NPCShop shop)
         {
             //Retrieve price from config
-            bool useGlobalPrice = modConfig.useGlobalPrice;
+            var useGlobalPrice = modConfig.useGlobalPrice;
             var DyePrice = modConfig.DyePrice;
+            var enablePreHardmode = modConfig.enablePreHardmode;
 
             if(shop.NpcType == NPCID.DyeTrader) {
                 foreach(short itemid in strangeDyes) {
                     if (useGlobalPrice) {
-                        shop.Add(new Item(itemid) { shopCustomPrice = DyePrice }, Condition.Hardmode);
+                        shop.Add(new Item(itemid) { shopCustomPrice = DyePrice }, enablePreHardmode?Condition.NpcIsPresent(NPCID.DyeTrader):Condition.Hardmode);    //Needed another condition to always be true if prehardmode enabled
                     }
                 }
             }
