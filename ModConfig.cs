@@ -1,11 +1,5 @@
-﻿//using System;
-//using System.Collections.Generic;
-using System.ComponentModel;
-//using Terraria;
-//using Terraria.ModLoader;
+﻿using System.ComponentModel;
 using Terraria.ModLoader.Config;
-//using Terraria.ModLoader.Config.UI;
-
 
 namespace BuyableStrangeDyes
 {
@@ -13,11 +7,12 @@ namespace BuyableStrangeDyes
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        [Tooltip("The cost of Strange Dyes in copper coins")]
         [Range(1, 100000000)]
         [DefaultValue(1000000)]
         [ReloadRequired]
         public int DyePrice;
 
+        //TODO: Implement configurable prices per dye
+        //TODO: Implement ability to enable dyes pre-Hardmode
     }
 }

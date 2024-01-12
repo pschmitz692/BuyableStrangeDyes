@@ -1,1 +1,10 @@
+Configs: {
+	ModConfiguration: {
+		DyePrice: {
+			Tooltip: The cost of Strange Dyes in copper coins
+			Label: Dye Price
+		}
 
+		DisplayName: Buyable Strange Dyes Config
+	}
+}
