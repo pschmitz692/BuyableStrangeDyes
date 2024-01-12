@@ -44,9 +44,10 @@ namespace BuyableStrangeDyes.NPC
 
         public override void ModifyShop(NPCShop shop)
         {
+            var DyePrice = ModContent.GetInstance<ModConfiguration>().DyePrice;
             if(shop.NpcType == NPCID.DyeTrader) {
                 foreach(short itemid in strangeDyes) { 
-                    shop.Add(new Item(itemid) { shopCustomPrice = 1000000 }, Condition.Hardmode);
+                    shop.Add(new Item(itemid) { shopCustomPrice = DyePrice }, Condition.Hardmode);
                 }
             }
         }
