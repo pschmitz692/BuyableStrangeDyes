@@ -8,53 +8,59 @@ namespace BuyableStrangeDyes.NPC
     {
         static ModConfiguration modConfig = ModContent.GetInstance<ModConfiguration>();
 
-        static short[] strangeDyes = {
-            ItemID.AcidDye,
-            ItemID.BlueAcidDye,
-            ItemID.RedAcidDye,
-            ItemID.ChlorophyteDye,
-            ItemID.GelDye,
-            ItemID.MushroomDye,
-            ItemID.GrimDye,
-            ItemID.HadesDye,
-            ItemID.BurningHadesDye,
-            ItemID.ShadowflameHadesDye,
-            ItemID.LivingOceanDye,
-            ItemID.LivingFlameDye,
-            ItemID.LivingRainbowDye,
-            ItemID.MartianArmorDye,
-            ItemID.MidnightRainbowDye,
-            ItemID.MirageDye,
-            ItemID.NegativeDye,
-            ItemID.PixieDye,
-            ItemID.PhaseDye,
-            ItemID.PurpleOozeDye,
-            ItemID.ReflectiveDye,
-            ItemID.ReflectiveCopperDye,
-            ItemID.ReflectiveGoldDye,
-            ItemID.ReflectiveObsidianDye,
-            ItemID.ReflectiveMetalDye,
-            ItemID.ReflectiveSilverDye,
-            ItemID.ShadowDye,
-            ItemID.ShiftingSandsDye,
-            ItemID.DevDye,
-            ItemID.TwilightDye,
-            ItemID.WispDye,
-            ItemID.InfernalWispDye,
-            ItemID.UnicornWispDye
+        static int[,] strangeDyes = {
+            { ItemID.AcidDye, modConfig.AcidDyePrice},
+            { ItemID.BlueAcidDye, modConfig.BlueAcidDyePrice},
+            { ItemID.RedAcidDye, modConfig.RedAcidDyePrice},
+            { ItemID.ChlorophyteDye, modConfig.ChlorophyteDyePrice},
+            { ItemID.GelDye, modConfig.GelDyePrice},
+            { ItemID.MushroomDye, modConfig.MushroomDyePrice},
+            { ItemID.GrimDye, modConfig.GrimDyePrice},
+            { ItemID.HadesDye, modConfig.HadesDyePrice},
+            { ItemID.BurningHadesDye, modConfig.BurningHadesDyePrice},
+            { ItemID.ShadowflameHadesDye, modConfig.ShadowflameHadesDyePrice},
+            { ItemID.LivingOceanDye, modConfig.LivingOceanDyePrice},
+            { ItemID.LivingFlameDye, modConfig.LivingFlameDyePrice},
+            { ItemID.LivingRainbowDye, modConfig.LivingRainbowDyePrice},
+            { ItemID.MartianArmorDye, modConfig.MartianArmorDyePrice},
+            { ItemID.MidnightRainbowDye, modConfig.MidnightRainbowDyePrice},
+            { ItemID.MirageDye, modConfig.MirageDyePrice},
+            { ItemID.NegativeDye, modConfig.NegativeDyePrice},
+            { ItemID.PixieDye, modConfig.PixieDyePrice},
+            { ItemID.PhaseDye, modConfig.PhaseDyePrice},
+            { ItemID.PurpleOozeDye, modConfig.PurpleOozeDyePrice},
+            { ItemID.ReflectiveDye, modConfig.ReflectiveDyePrice},
+            { ItemID.ReflectiveCopperDye, modConfig.ReflectiveCopperDyePrice},
+            { ItemID.ReflectiveGoldDye, modConfig.ReflectiveGoldDyePrice},
+            { ItemID.ReflectiveObsidianDye, modConfig.ReflectiveObsidianDyePrice},
+            { ItemID.ReflectiveMetalDye, modConfig.ReflectiveMetalDyePrice},
+            { ItemID.ReflectiveSilverDye, modConfig.ReflectiveSilverDyePrice},
+            { ItemID.ShadowDye, modConfig.ShadowDyePrice},
+            { ItemID.ShiftingSandsDye, modConfig.ShiftingSandsDyePrice},
+            { ItemID.DevDye, modConfig.DevDyePrice},
+            { ItemID.TwilightDye, modConfig.TwilightDyePrice},
+            { ItemID.WispDye, modConfig.WispDyePrice},
+            { ItemID.InfernalWispDye, modConfig.InfernalWispDyePrice},
+            { ItemID.UnicornWispDye, modConfig.UnicornWispDyePrice}
                 };
 
         public override void ModifyShop(NPCShop shop)
         {
             //Retrieve price from config
             var useGlobalPrice = modConfig.useGlobalPrice;
-            var DyePrice = modConfig.DyePrice;
+            var DyePrice = modConfig.globalDyePrice;
             var enablePreHardmode = modConfig.enablePreHardmode;
 
             if(shop.NpcType == NPCID.DyeTrader) {
-                foreach(short itemid in strangeDyes) {
-                    if (useGlobalPrice) {
-                        shop.Add(new Item(itemid) { shopCustomPrice = DyePrice }, enablePreHardmode?Condition.NpcIsPresent(NPCID.DyeTrader):Condition.Hardmode);    //Needed another condition to always be true if prehardmode enabled
+                if(useGlobalPrice) {
+                    for (int i = 0; i < strangeDyes.GetLength(0); i++) {
+                        int itemid = strangeDyes[i, 0];
+                        shop.Add(new Item(itemid) { shopCustomPrice = DyePrice }, enablePreHardmode ? Condition.NpcIsPresent(NPCID.DyeTrader) : Condition.Hardmode);    //Needed another condition to always be true if prehardmode enabled
+                    }
+                } else {
+                    for (int i = 0; i < strangeDyes.GetLength(0); i++) {
+                        int itemid = strangeDyes[i, 0];
+                        shop.Add(new Item(itemid) { shopCustomPrice = strangeDyes[i, 1] }, enablePreHardmode ? Condition.NpcIsPresent(NPCID.DyeTrader) : Condition.Hardmode);
                     }
                 }
             }

@@ -1,13 +1,15 @@
 Configs: {
 	ModConfiguration: {
-		useGlobalPrice: {
-			Tooltip: Disabling this will enable per-dye prices
-			Label: Use the Dye Price value below for all Strange Dyes
+		DisplayName: Buyable Strange Dyes Config
+
+		Headers: {
+			PerDyePrices: Per-Dye Prices
+			GlobalOptionsHeader: Global Options
 		}
 
-		DyePrice: {
-			Tooltip: The cost of Strange Dyes in copper coins
-			Label: Dye Price
+		useGlobalPrice: {
+			Tooltip: Turning this off will enable per-dye prices
+			Label: Use global dye price
 		}
 
 		enablePreHardmode: {
@@ -15,6 +17,179 @@ Configs: {
 			Label: Enable Strange Dyes Pre-Hardmode
 		}
 
-		DisplayName: Buyable Strange Dyes Config
+		globalDyePrice: {
+			Label: Global Dye Price
+			Tooltip: The cost of Strange Dyes in copper coins
+		}
+
+		AcidDyePrice: {
+			Label: Acid Dye Price
+			Tooltip: ""
+		}
+
+		BlueAcidDyePrice: {
+			Label: Blue Acid Dye Price
+			Tooltip: ""
+		}
+
+		RedAcidDyePrice: {
+			Label: Red Acid Dye Price
+			Tooltip: ""
+		}
+
+		ChlorophyteDyePrice: {
+			Label: Chlorophyte Dye Price
+			Tooltip: ""
+		}
+
+		GelDyePrice: {
+			Label: Gel Dye Price
+			Tooltip: ""
+		}
+
+		MushroomDyePrice: {
+			Label: Mushroom Dye Price
+			Tooltip: ""
+		}
+
+		GrimDyePrice: {
+			Label: Grim Dye Price
+			Tooltip: ""
+		}
+
+		HadesDyePrice: {
+			Label: Hades Dye Price
+			Tooltip: ""
+		}
+
+		BurningHadesDyePrice: {
+			Label: Burning Hades Dye Price
+			Tooltip: ""
+		}
+
+		ShadowflameHadesDyePrice: {
+			Label: Shadowflame Hades Dye Price
+			Tooltip: ""
+		}
+
+		LivingOceanDyePrice: {
+			Label: Living Ocean Dye Price
+			Tooltip: ""
+		}
+
+		LivingFlameDyePrice: {
+			Label: Living Flame Dye Price
+			Tooltip: ""
+		}
+
+		LivingRainbowDyePrice: {
+			Label: Living Rainbow Dye Price
+			Tooltip: ""
+		}
+
+		MartianArmorDyePrice: {
+			Label: Martian Armor Dye Price
+			Tooltip: ""
+		}
+
+		MidnightRainbowDyePrice: {
+			Label: Midnight Rainbow Dye Price
+			Tooltip: ""
+		}
+
+		MirageDyePrice: {
+			Label: Mirage Dye Price
+			Tooltip: ""
+		}
+
+		NegativeDyePrice: {
+			Label: Negative Dye Price
+			Tooltip: ""
+		}
+
+		PixieDyePrice: {
+			Label: Pixie Dye Price
+			Tooltip: ""
+		}
+
+		PhaseDyePrice: {
+			Label: Phase Dye Price
+			Tooltip: ""
+		}
+
+		PurpleOozeDyePrice: {
+			Label: Purple Ooze Dye Price
+			Tooltip: ""
+		}
+
+		ReflectiveDyePrice: {
+			Label: Reflective Dye Price
+			Tooltip: ""
+		}
+
+		ReflectiveCopperDyePrice: {
+			Label: Reflective Copper Dye Price
+			Tooltip: ""
+		}
+
+		ReflectiveGoldDyePrice: {
+			Label: Reflective Gold Dye Price
+			Tooltip: ""
+		}
+
+		ReflectiveObsidianDyePrice: {
+			Label: Reflective Obsidian Dye Price
+			Tooltip: ""
+		}
+
+		ReflectiveMetalDyePrice: {
+			Label: Reflective Metal Dye Price
+			Tooltip: ""
+		}
+
+		ReflectiveSilverDyePrice: {
+			Label: Reflective Silver Dye Price
+			Tooltip: ""
+		}
+
+		ShadowDyePrice: {
+			Label: Shadow Dye Price
+			Tooltip: ""
+		}
+
+		ShiftingSandsDyePrice: {
+			Label: Shifting Sands Dye Price
+			Tooltip: ""
+		}
+
+		DevDyePrice: {
+			Label: Dev Dye Price
+			Tooltip: ""
+		}
+
+		TwilightDyePrice: {
+			Label: Twilight Dye Price
+			Tooltip: ""
+		}
+
+		WispDyePrice: {
+			Label: Wisp Dye Price
+			Tooltip: ""
+		}
+
+		InfernalWispDyePrice: {
+			Label: Infernal Wisp Dye Price
+			Tooltip: ""
+		}
+
+		UnicornWispDyePrice: {
+			Label: Unicorn Wisp Dye Price
+			Tooltip: ""
+		}
+
+		perDyePrices: {
+			Label: per Dye Prices
+			Tooltip: ""
+		}
 	}
 }
