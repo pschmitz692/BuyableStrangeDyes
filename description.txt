@@ -1,5 +1,6 @@
 Despite what the Dye Trader says, Strange Dyes do in fact have a price.
 
-Dyes become buyable for 1 platinum each once Hardmode starts, though the price is configurable.
+Dyes become buyable for 1 platinum each once Hardmode starts.
+Dyes can be enabled in Pre-Hardmode and can have an individual price for each dye.
 
 The Strange Dyes nearly fill the Dye Trader's inventory, meaning there's barely any slots left if another mod adds extra dyes. Use with other mods at your own risk.
